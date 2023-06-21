@@ -1,11 +1,11 @@
 @font-face {
     font-family: Articulat;
-    src: url(./resources/typafaces/ArticulatCF-Bold.ttf)
+    src: url(./resources/typefaces/ArticulatCF-Bold.ttf)
 }
 
 @font-face {
     font-family: Hando;
-    src: url(./resources/typafaces/HandoSoftTrial-Bold.ttf);
+    src: url(./resources/typefaces/HandoSoftTrial-Bold.ttf);
 }
 
 * {
