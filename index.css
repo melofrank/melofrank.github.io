@@ -266,6 +266,95 @@ h3{
     height: 400px;
 }
 
+.intro-image-HONC img{
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+/*video*/
+iframe {
+    width: 80%;
+    height: 80%;
+}
+
+/*images*/
+#photos-content img {
+    padding: 20px;
+}
+
+ #img1 {
+    width: 70%;
+    float: left;
+ }
+ 
+ #img2 {
+    width: 30%;
+    float: right;
+ }
+
+ #img3 {
+    width: 40%;
+    float: left;
+ }
+
+ #img4 {
+    width: 50%;
+    float: right;
+ }
+ 
+ #img5 {
+    width: 30%;
+    float: left;
+ }
+
+ #img6 {
+    width: 30%;
+    clear: both;
+ }
+
+ #img7 {
+    width: 40%;
+ }
+
+ #img8 {
+    width: 40%;
+ }
+
+ #img9 {
+    width: 90%;
+ }
+
+ #mail1 {
+    width: 70%;
+ }
+
+ #mail2 {
+    width: 30%;
+    float: right;
+ }
+ 
+ #mail3 {
+    width: 60%;
+ }
+
+/*HONC photos*/
+
+#photos-HONC img{
+    padding-top: 40px;
+}
+
+#HONC1 {
+    width: 30%;
+}
+#HONC2 {
+    width: 45%;
+    float: right;
+}
+
+figcaption {
+    padding-top: 10px;
+}
+
 /*resources*/
 #resources-content { 
     display: flex;
