@@ -34,6 +34,53 @@ h3{
 }
 
 /*nav*/
+/*project-nav*/
+
+.project-nav {
+    position: fixed;
+    top: 100vh;
+    z-index: 1;
+}
+
+#navbar {
+    position: fixed;
+    overflow: show;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #navbar a {
+    font-family: "Articulat";
+    display: inline;
+    padding-left: 5px;
+
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    text-shadow: 0 0 4px #ffffff83;
+    filter: blur(2px); 
+    transition: filter cubic-bezier(0, 0.7, 1, 1) 0.2s;
+  }
+
+  #navbar a:hover{
+    filter: none;
+    text-shadow: 0 0 4px #fff700;
+    padding-left: 10px;
+  }
+
+  .sticky {
+    position: absolute;
+    top: 50%;
+    left: 22vw;
+
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    
+    bottom: 0;
+  }
+
+/*nav*/
 #nav {
     position: fixed;
     top: 0;
@@ -55,7 +102,7 @@ h3{
 }
 
 .nav-item {
-    padding: 5px 0 5px 20px;
+    padding: 0 0 0 20px;
 }
 
 .nav-item a {
@@ -63,25 +110,95 @@ h3{
     color: white;
     text-shadow: 0 0 4px #ffffff83;
     filter: blur(2px);
-    transition: filter cubic-bezier(0, 0.7, 1, 1) 0.2s;
+    transition: filter cubic-bezier(0, 0.7, 1, 1) 0.2s; 
 }
 
-.nav-item.active a{
+.nav-item.active a {
     padding-left: 30px;
     filter: none;
+    text-shadow: 0 0 4px #fff700;
 }
 
+.nav-item.inactive a:hover{
+    text-shadow: 0 0 4px #fff700;
+    padding-left: 10px;
+}
 
+/*mobile-nav*/
 
-.inactive a:hover {
+#mobile-button {
+    position: fixed;
+    top: 20px;
+    left: 15px;
+    user-select: none;
+    
+
+    display: none;
+    filter: blur(2px); 
+    font-size: 50px;  
+}
+
+#mobile-button:hover {
     filter: none;
     text-shadow: 0 0 4px #fff700;
-    padding-left: +10px;
 }
-.active a:hover{
+
+.mobile-nav {
+    position: fixed;
+    height: 100vh;
+    width: calc(100vw + 1px);
+
+    width: 1px;
+    overflow: hidden;
+    left: -1px;
+
+    font-family: "Articulat";
+    
+    color: white;
+    font-size: 30px;
+    
+    transition: filter cubic-bezier(0, 0.7, 1, 1) 0.2s;
+    z-index: 1;
+    background-color: #171616;
+    opacity: 0.8;
+    word-break: keep-all;
+    white-space: nowrap;
+    
+}
+
+.mobile-nav a {
+    text-decoration: none;
+    color: white;
+    text-shadow: 0 0 4px #ffffff83;
+    filter: blur(2px); 
+
+}
+
+#mobile-general-nav {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 100px;
+    
+}
+
+#mobile-project-nav {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 20px;
+}
+
+#mobile-project-nav a {
+    padding-left: 20px;
+}
+
+#mobile-project-nav a:hover{
+    filter: none;
+    padding-left: 30px;
     text-shadow: 0 0 4px #fff700;
-    padding-left: 40px;
 }
+
 
 /*main*/
 
@@ -215,8 +332,6 @@ h3{
 
 }
 
-
-
 .work-nav a {
     display: block;
     text-decoration: none;
@@ -271,15 +386,10 @@ h3{
     height: 100%;
     width: 100%;
 }
-/*video*/
-iframe {
-    width: 80%;
-    height: 80%;
-}
 
 /*images*/
 #photos-content img {
-    padding: 20px;
+    padding: 20px 20px 20px 0;
 }
 
  #img1 {
@@ -352,6 +462,7 @@ iframe {
 }
 
 figcaption {
+    font-size: 12px;
     padding-top: 10px;
 }
 
@@ -462,59 +573,13 @@ pre{
     transform: skew(5deg, 15deg);
 }
 
-/*project-nav*/
 
-.project-nav {
-    position: fixed;
-    top: 100vh;
-    z-index: 1;
-}
-
-#navbar {
-    position: fixed;
-    overflow: show;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  #navbar a {
-    font-family: "Articulat";
-    display: inline;
-    padding-left: 5px;
-
-    text-decoration: none;
-    color: white;
-    font-size: 30px;
-    text-shadow: 0 0 4px #ffffff83;
-    filter: blur(2px); 
-    transition: filter cubic-bezier(0, 0.7, 1, 1) 0.2s;
-  }
-
-  #navbar a:hover{
-    filter: none;
-    text-shadow: 0 0 4px #fff700;
-    padding-left: 10px;
-  }
-
-  
-  
-  .sticky {
-    position: absolute;
-    top: 50%;
-    left: 22vw;
-
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    
-    bottom: 0;
-    
-  }
   
 /*media queries*/
 @media (min-width: 768px) and (max-width: 1200px){
     #work-content {
         padding: 20px 5% 20px 20px;
+        width: 100%;
     }
 
     #nav {
@@ -540,100 +605,6 @@ pre{
     }
 }
 
-.mobile-nav {
-    position: fixed;
-    height: 100vh;
-    width: calc(100vw + 1px);
-
-    width: 1px;
-    overflow: hidden;
-    left: -1px;
-
-    font-family: "Articulat";
-
-    
-    color: white;
-    font-size: 30px;
-    
-    
-    transition: filter cubic-bezier(0, 0.7, 1, 1) 0.2s;
-    z-index: 1;
-    background-color: #171616;
-    opacity: 0.8;
-    word-break: keep-all;
-    white-space: nowrap;
-
-}
-
-.mobile-nav a {
-    text-decoration: none;
-    color: white;
-    text-shadow: 0 0 4px #ffffff83;
-    filter: blur(2px); 
-
-}
-
-
-
-
-
-#mobile-button {
-    position: fixed;
-    top: 20px;
-    left: 21px;
-    user-select: none;
-    
-    padding-left: 5px;
-    display: none;
-    filter: blur(2px); 
-    font-size: 50px;  
-}
-
-#mobile-button:hover {
-    filter: none;
-    text-shadow: 0 0 4px #fff700;
-}
-
-#mobile-general-nav {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    top: 100px;
-    left: 21px;
-}
-
-.active a{
-    padding-left: 30px;
-    filter: none;
-}
-
-.active a:hover{
-    text-shadow: 0 0 4px #fff700;
-    padding-left: 40px;
-    filter: none;
-}
-
-
-#mobile-project-nav {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    bottom: 20px;
-    left: 21px;
-}
-
-#mobile-project-nav a:hover{
-    filter: none;
-    padding-left: 20px;
-    text-shadow: 0 0 4px #fff700;
-}
-
-/*
-#mobile-nav:hover {
-    filter: none;
-    text-shadow: 0 0 4px #fff700;
-}
-*/
 @media (max-width: 768px) {
     #nav {
         display: none;
@@ -646,9 +617,12 @@ pre{
     #main {
         width: calc(100vw - 10px);
         overflow-x: hidden;
+        word-wrap: normal;
     }
 
-
+    #work-content {
+        width: 100%;
+    }
 
     .script-left {
         width: 80%;
